@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Is Pal On TheBreak?</title>
+  <meta name="description" content="Is Pal On Vistabreak?">
+
+  <style type="text/css">
+    html, body {height: 100%;}
+    body {text-align: center;}
+
+    #answer {
+      display: inline-block;
+      margin-top: 200px;
+      font-weight: bold;
+      font-size: 120pt;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      color: black;
+    }
+
+    #answer>a {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 120pt;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="answer" target="_blank"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script type="text/javascript">
+      var now = moment(),
+          start = moment("2016-04-21 15:00-04:00"),
+          end = moment("2016-05-21 06:00-04:00");
+
+      var answer = (now >= start && now <= end) ? "<a href='https://twitter.com/search?q=%23prayforpal&src=typd'>YES</a>" : "NO";
+      var elem = document.getElementById('answer');
+      elem.innerHTML = answer;
+  </script>
+</body>
+</html>
